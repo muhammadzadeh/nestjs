@@ -127,7 +127,7 @@ export class RabbitMQModule
     await Promise.all(
       this.connectionManager
         .getConnections()
-        .map((connection) => connection.managedConnection.close)
+        .map((connection) => connection.managedConnection.close())
     );
   }
 
@@ -195,7 +195,13 @@ export class RabbitMQModule
               'rmq' // contextType
             );
 
-            const { exchange, routingKey, queue, queueOptions } = config;
+            const handlerConfig =
+              connection.configuration.handlers[config.name || ''];
+            const exchange = handlerConfig?.exchange || config.exchange;
+            const routingKey = handlerConfig?.routingKey || config.routingKey;
+            const queue = handlerConfig?.queue || config.queue;
+            const queueOptions =
+              handlerConfig?.queueOptions || config.queueOptions;
 
             const handlerDisplayName = `${discoveredMethod.parentClass.name}.${
               discoveredMethod.methodName
