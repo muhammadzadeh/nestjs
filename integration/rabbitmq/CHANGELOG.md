@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/golevelup/nestjs/compare/rabbitmq-integration@2.5.0...rabbitmq-integration@2.6.0) (2022-07-28)
+
+### Features
+
+- **rabbitmq:** new config property "handlers" ([#446](https://github.com/golevelup/nestjs/issues/446)) ([9986b3d](https://github.com/golevelup/nestjs/commit/9986b3d9a79e2e92e71105767501ce8120cd12b6)), closes [#445](https://github.com/golevelup/nestjs/issues/445)
+
+# [2.5.0](https://github.com/golevelup/nestjs/compare/rabbitmq-integration@2.4.0...rabbitmq-integration@2.5.0) (2022-07-22)
+
+### Features
+
+- **rabbitmq:** expose consumer tag for cancel & resume ([3f554c2](https://github.com/golevelup/nestjs/commit/3f554c24edc2896540fee457a6c014983d6f1b82))
+
 # [2.4.0](https://github.com/golevelup/nestjs/compare/rabbitmq-integration@2.3.0...rabbitmq-integration@2.4.0) (2022-05-31)
 
 ### Features
